@@ -24,7 +24,6 @@ class CourceController extends Controller
             return new DataResource(false, "Cource not found", null);
         }
     }
-    
 
     public function searchCource(Request $request) {
         $search = $request->input("search");
