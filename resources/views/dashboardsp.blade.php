@@ -79,7 +79,7 @@
                         </li>
                     </a>
 
-                    <a href="{{ route('commentsad') }}">
+                    <a href="#" style="color: black">
                         <li><i class='bx bx-dollar-circle'></i>
                             <span class="info">
                                 <h4 style="font-size: 17px">
@@ -107,7 +107,7 @@
                     <div class="orders">
                         <div class="header2">
                             <i class='bx bx-receipt'></i>
-                            <h3>Data Keuangan</h3>
+                            <h3>Data Siswa Yang Memiliki Course</h3>
                         </div>
                         <table>
                             <thead>
