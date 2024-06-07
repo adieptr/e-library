@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Color variables */
+:root {
+    --white-color: #fff;
+    --bg-color: white;
+    --gray-color: #ccc;
+  }
+
+  /* Changing background color */
+  body {
+    background: var(--bg-color) !important;
+  }
+
+  /* Changing link color */
+  .nav-item .nav-link {
+    color: var(--white-color);
+  }
+
+  /* Hero section background image */
+  .hero {
+    height: 100vh;
+    background-image: url("../images/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #skills i {
+    height: 100px;
+    width: 100px;
+  }
+
+  #portfolio img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  #about .img,
+  #about img,
+  .hire-text h2 {
+    position: relative;
+  }
+
+  /* Timeline background line */
+  #about .img::before {
+    content: "";
+    left: 50%;
+    width: 4px;
+    position: absolute;
+    height: calc(100% + 140px);
+    background: var(--gray-color);
+  }
+
+  #about img,
+  #about .hire-text h2 {
+    width: 140px;
+  }
+
+  #about .hire-text h2 {
+    height: 140px;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+
+  footer .social-icons a {
+    width: 30px;
+    height: 30px;
+  }
+
+  #cv img {
+    width: 230px;
+  }
+
+  /* Contact section background image */
+  #contact {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("../images/contact-bg.jpeg");
+  }
+
+  @media screen and (max-width: 990px) {
+    #skills .card {
+      width: calc(100% / 2 - 10px) !important;
+    }
+  }
+
+  @media screen and (max-width: 668px) {
+    #skills .card,
+    #portfolio .card-wrapper {
+      width: 100% !important;
+    }
+  }
+
+  section{
+    font-family: "Poppins", sans-serif;
+    display: grid;
+    place-items: center;
+  }
+  section img{
+    width: 40vw;
+     height: 40vw;
+     object-fit:cover;
+     border-radius: 20px;
+  }
+
+  section p{
+    font-size: 1.2rem;
+  }
+
+  section hr{
+    border-top: 3px solid rgb(0, 0, 0) ;
+  }
+
+  section .pol{
+    background-color: #dddddd;
+    border-radius: 20px;
+    padding: 1rem;
+  }
+
+  article h1, p, h2, h4, h5{
+    font-family: "Poppins", sans-serif;
+  }
+
+  .tutor{
+    display: flex;
+    justify-content:flex-start;
+    align-items:center ;
+
+  }
+  .tutor .block{
+    display: block;
+    margin: 8px;
+  }
+
+  .beli{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+
+  .beli a{
+    width: 80vw;
+    height: 7vh;
+    background-color: #FF7F3F;
+    color: white;
+    text-align: center;
+    line-height: 45px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .beli a:hover{
+    background-color: #bd5e2e;
+    color: rgb(182, 182, 182);
+  }
+
+  .jud{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(31, 31, 31);
+    margin: 5px;
+    margin-top: 90px;
+  }
+  .jud a{
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+  }
+
+  .jud a:hover{
+    text-decoration: none;
+    color: rgb(0, 19, 145);
+  }
+
+  .jud span{
+    color: rgb(96, 96, 96);
+  }
