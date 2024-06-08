@@ -64,10 +64,10 @@
                                     data-submenu-options="{&quot;toggleType&quot;: &quot;fade&quot;, &quot;handler&quot;: &quot;mouse-in-out&quot;}">
                                     <li class="menu-item-home is-active"><a href="#banner"><span>Home</span> </a></li>
                                     <li><a href="#about"><span>Why Us?</span> </a></li>
-                                    <li class="menu-item-has-children position-applied"><a
-                                            href="#services"><span>Our Courses</span> <span class="submenu-expander"><svg
-                                                    height="32" style="width: 1em; height: 1em;" viewbox="0 0 21 32"
-                                                    width="21" xmlns="http://www.w3.org/2000/svg">
+                                    <li class="menu-item-has-children position-applied"><a href="#services"><span>Our
+                                                Courses</span> <span class="submenu-expander"><svg height="32"
+                                                    style="width: 1em; height: 1em;" viewbox="0 0 21 32" width="21"
+                                                    xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M10.5 18.375l7.938-7.938c.562-.562 1.562-.562 2.125 0s.562 1.563 0 2.126l-9 9c-.563.562-1.5.625-2.063.062L.437 12.562C.126 12.25 0 11.876 0 11.5s.125-.75.438-1.063c.562-.562 1.562-.562 2.124 0z"
                                                         fill="currentColor"></path>
@@ -297,7 +297,7 @@
                                     </div>
                                     <div class="relative z-2">
                                         <div class="ld-fancy-heading relative animation-element">
-                                            <h1 class="ld-fh-element relative lqd-highlight-custom lqd-highlight-custom-2 mb-0/35em text-white text-70"
+                                            <h1 class="ld-fh-element relative lqd-highlight-custom lqd-highlight-custom-2 mb-0/35em text-white text-50"
                                                 data-delay-options="{&quot;elements&quot;: &quot;.lqd-highlight-inner&quot;, &quot;delayType&quot;: &quot;transition&quot;}"
                                                 data-inview="true" data-text-rotator="true"
                                                 data-transition-delay="true">
@@ -347,7 +347,8 @@
                                             <p class="m-0"><a href="#"><img alt="Shape 3D" height="10"
                                                         src="assets/images/demo/start-hub-2/3D/shape.svg"
                                                         width="48"> </a><span>&nbsp; &nbsp;</span> <span
-                                                    class="text-12">Banyak pilihan materi yang bisa Anda dapatkan</span>
+                                                    class="text-12">Banyak pilihan materi yang bisa Anda
+                                                    dapatkan</span>
                                             </p>
                                         </div>
                                     </div>
@@ -425,9 +426,11 @@
                                             </div>
                                         </div>
                                         <div class="contents">
-                                            <h3 class="text-20 mb-0/5em lqd-iconbox-heading">Quality Learning Materials with Learning Management System
+                                            <h3 class="text-20 mb-0/5em lqd-iconbox-heading">Quality Learning Materials
+                                                with Learning Management System
                                             </h3>
-                                            <p>Dapatkan akses LMS Codinggo dengan materi pembelajaran berkualitas (video tutorial, file materi, pelatihan,
+                                            <p>Dapatkan akses LMS Codinggo dengan materi pembelajaran berkualitas (video
+                                                tutorial, file materi, pelatihan,
                                                 dan proyek praktek) untuk mengaplikasikan keterampilan yang
                                                 dipelajari kapan saja dan dimana saja.
                                             <p>
@@ -516,7 +519,8 @@
                                         Our Courses</h6>
                                 </div>
                                 <div class="ld-fancy-heading relative">
-                                    <h2 class="ld-fh-element mb-0/5em inline-block relative">Cek kursus yang sedang populer</h2>
+                                    <h2 class="ld-fh-element mb-0/5em inline-block relative">Cek kursus yang sedang
+                                        populer</h2>
                                 </div>
                             </div>
                             <div class="product">
@@ -529,12 +533,15 @@
                                                 <span class="discount-tag">Best Seller</span>
                                                 <img src="{{ asset('uploaded_files/' . $mat->thumb) }}"
                                                     class="product-thumb" alt="">
-                                                    <button class="card-btn" onclick="location.href='{{ route('course.detailcor', $mat->id) }}'">Lihat Selengkapnya</button>
+                                                <button class="card-btn"
+                                                    onclick="location.href='{{ route('course.detailcor', $mat->id) }}'">Lihat
+                                                    Selengkapnya</button>
                                             </div>
                                             <div class="product-info">
                                                 <h3 class="product-brand">{{ $mat->title }}</h3>
                                                 <p class="product-short-description">{{ $mat->description }}</p>
-                                                <span class="price">Rp{{ number_format($mat->harga, 0, ',', '.') }}</span>
+                                                <span
+                                                    class="price">Rp{{ number_format($mat->harga, 0, ',', '.') }}</span>
                                             </div>
                                         </div>
                                     @endforeach
@@ -584,12 +591,15 @@
                                                 <span class="discount-tag">Best Seller</span>
                                                 <img src="{{ asset('uploaded_files/' . $matbe->thumb) }}"
                                                     class="product-thumb" alt="">
-                                                    <button class="card-btn" onclick="location.href='{{ route('course.detailcor', $matbe->id) }}'">Lihat Selengkapnya</button>
+                                                <button class="card-btn"
+                                                    onclick="location.href='{{ route('course.detailcor', $matbe->id) }}'">Lihat
+                                                    Selengkapnya</button>
                                             </div>
                                             <div class="product-info">
                                                 <h3 class="product-brand">{{ $matbe->title }}</h3>
                                                 <p class="product-short-description">{{ $matbe->description }}</p>
-                                                <span class="price">Rp{{ number_format($matbe->harga, 0, ',', '.') }}</span>
+                                                <span
+                                                    class="price">Rp{{ number_format($matbe->harga, 0, ',', '.') }}</span>
                                             </div>
                                         </div>
                                     @endforeach
@@ -639,12 +649,15 @@
                                                 <span class="discount-tag">Best Seller</span>
                                                 <img src="{{ asset('uploaded_files/' . $matin->thumb) }}"
                                                     class="product-thumb" alt="">
-                                                    <button class="card-btn" onclick="location.href='{{ route('course.detailcor', $matin->id) }}'">Lihat Selengkapnya</button>
+                                                <button class="card-btn"
+                                                    onclick="location.href='{{ route('course.detailcor', $matin->id) }}'">Lihat
+                                                    Selengkapnya</button>
                                             </div>
                                             <div class="product-info">
                                                 <h3 class="product-brand">{{ $matin->title }}</h3>
                                                 <p class="product-short-description">{{ $matin->description }}</p>
-                                                <span class="price">Rp{{ number_format($matin->harga, 0, ',', '.') }}</span>
+                                                <span
+                                                    class="price">Rp{{ number_format($matin->harga, 0, ',', '.') }}</span>
                                             </div>
                                         </div>
                                     @endforeach
@@ -694,12 +707,15 @@
                                                 <span class="discount-tag">Best Seller</span>
                                                 <img src="{{ asset('uploaded_files/' . $matad->thumb) }}"
                                                     class="product-thumb" alt="">
-                                                    <button class="card-btn" onclick="location.href='{{ route('course.detailcor', $matad->id) }}'">Lihat Selengkapnya</button>
+                                                <button class="card-btn"
+                                                    onclick="location.href='{{ route('course.detailcor', $matad->id) }}'">Lihat
+                                                    Selengkapnya</button>
                                             </div>
                                             <div class="product-info">
                                                 <h3 class="product-brand">{{ $matad->title }}</h3>
                                                 <p class="product-short-description">{{ $matad->description }}</p>
-                                                <span class="price">Rp{{ number_format($matad->harga, 0, ',', '.') }}</span>
+                                                <span
+                                                    class="price">Rp{{ number_format($matad->harga, 0, ',', '.') }}</span>
                                             </div>
                                         </div>
                                     @endforeach
@@ -807,7 +823,8 @@
                                                             class="lqd-pf-overlay-bg lqd-overlay flex"></span>
                                                         <div
                                                             class="lqd-pf-info flex flex-wrap items-center justify-between w-full px-1/5em py-1/5em bg-white rounded-4">
-                                                            <h5 class="lqd-pf-title mt-0 mb-0">Diskon 50% untuk kamu pecinta desain</h5>
+                                                            <h5 class="lqd-pf-title mt-0 mb-0">Diskon 50% untuk kamu
+                                                                pecinta desain</h5>
                                                             <ul
                                                                 class="reset-ul inline-nav lqd-pf-cat inline-flex relative z-2">
                                                                 {{-- <li><a href="#">Digital Design</a></li> --}}
@@ -838,7 +855,8 @@
                                                             class="lqd-pf-overlay-bg lqd-overlay flex"></span>
                                                         <div
                                                             class="lqd-pf-info flex flex-wrap items-center justify-between w-full px-1/5em py-1/5em bg-white rounded-4">
-                                                            <h5 class="lqd-pf-title mt-0 mb-0">Baru! Kursus Chatbot Telegram
+                                                            <h5 class="lqd-pf-title mt-0 mb-0">Baru! Kursus Chatbot
+                                                                Telegram
                                                             </h5>
                                                             <ul
                                                                 class="reset-ul inline-nav lqd-pf-cat inline-flex relative z-2">
@@ -870,7 +888,8 @@
                                                             class="lqd-pf-overlay-bg lqd-overlay flex"></span>
                                                         <div
                                                             class="lqd-pf-info flex flex-wrap items-center justify-between w-full px-1/5em py-1/5em bg-white rounded-4">
-                                                            <h6 class="lqd-pf-title mt-0 mb-0">Lagi Viral! Cara desain interface dengan Figma</h6>
+                                                            <h6 class="lqd-pf-title mt-0 mb-0">Lagi Viral! Cara desain
+                                                                interface dengan Figma</h6>
                                                             <ul
                                                                 class="reset-ul inline-nav lqd-pf-cat inline-flex relative z-2">
                                                                 {{-- <li><a href="#">Branding</a></li> --}}
@@ -901,7 +920,8 @@
                                                             class="lqd-pf-overlay-bg lqd-overlay flex"></span>
                                                         <div
                                                             class="lqd-pf-info flex flex-wrap items-center justify-between w-full px-1/5em py-1/5em bg-white rounded-4">
-                                                            <h5 class="lqd-pf-title mt-0 mb-0">Diskon 30% karena udah setia dengan Codinggo
+                                                            <h5 class="lqd-pf-title mt-0 mb-0">Diskon 30% karena udah
+                                                                setia dengan Codinggo
                                                             </h5>
                                                             <ul
                                                                 class="reset-ul inline-nav lqd-pf-cat inline-flex relative z-2">
@@ -1062,7 +1082,8 @@
                                             <div class="ld-fancy-heading relative">
                                                 <p
                                                     class="ld-fh-element mb-0/5em inline-block relative text-16 leading-1/6em">
-                                                    Codinggo telah berdiri sejak 2018 dengan menjalin hubungan bersama tutor dan kompetitor kursus yang berkualitas.</p>
+                                                    Codinggo telah berdiri sejak 2018 dengan menjalin hubungan bersama
+                                                    tutor dan kompetitor kursus yang berkualitas.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1080,7 +1101,8 @@
                                             <div class="ld-fancy-heading relative">
                                                 <p
                                                     class="ld-fh-element mb-0/5em inline-block relative text-16 leading-1/6em">
-                                                    Dengan banyak ulasan positif dari pengguna yang telah mengikuti kursus Codinggo</p>
+                                                    Dengan banyak ulasan positif dari pengguna yang telah mengikuti
+                                                    kursus Codinggo</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1097,7 +1119,8 @@
                                             <div class="ld-fancy-heading relative">
                                                 <p
                                                     class="ld-fh-element mb-0/5em inline-block relative text-16 leading-1/6em">
-                                                    Terdapat banyak pilihan kursus dengan materi berkualitas dan tutor berpengalaman yang bisa Anda ikuti.</p>
+                                                    Terdapat banyak pilihan kursus dengan materi berkualitas dan tutor
+                                                    berpengalaman yang bisa Anda ikuti.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1113,7 +1136,8 @@
                         <div class="row m-0">
                             <div class="col col-12 text-start p-0">
                                 <div class="mb-10 ld-fancy-heading relative p">
-                                    <p class="ld-fh-element mb-0/5em inline-block relative text-14 font-medium">Beberapa Pilihan
+                                    <p class="ld-fh-element mb-0/5em inline-block relative text-14 font-medium">
+                                        Beberapa Pilihan
                                         Bahasa Pemrograman Yang Tersedia</p>
                                 </div>
                             </div>
@@ -1188,7 +1212,8 @@
                                     <h2 class="ld-fh-element relative text-36 mb-0 leading-1/15em">customers.</h2>
                                 </div>
                                 <div class="ld-fancy-heading relative">
-                                    <p class="ld-fh-element relative text-18 leading-1/25em mt-1em mb-0/75em">Dengar langsung dari pengguna setia Codinggo.</p>
+                                    <p class="ld-fh-element relative text-18 leading-1/25em mt-1em mb-0/75em">Dengar
+                                        langsung dari pengguna setia Codinggo.</p>
                                 </div>
                                 <img alt="trustpilot" height="110"
                                     src="assets/images/demo/start-hub-2/3D/Trustpilot.png" width="127">
@@ -1266,7 +1291,12 @@
                                                     </div>
                                                     <div class="lqd-testi-quote mb-1/5em px-1em">
                                                         <blockquote>
-                                                            <p><span style="font-weight: 500;"><span>Berkat pelatihan ini saya mendapatkan ilmu baru yang sangat mudah di pelajari dan menambah wawasan baru buat saya untuk memotivasi diri saya<param name="" value=""></span>
+                                                            <p><span style="font-weight: 500;"><span>Berkat pelatihan
+                                                                        ini saya mendapatkan ilmu baru yang sangat mudah
+                                                                        di pelajari dan menambah wawasan baru buat saya
+                                                                        untuk memotivasi diri saya
+                                                                        <param name="" value="">
+                                                                    </span>
                                                             </p>
                                                         </blockquote>
                                                     </div>
@@ -1280,7 +1310,8 @@
                                                                     src="assets/images/demo/start-hub-2/testimonial/image.jpg">
                                                             </figure>
                                                             <div class="lqd-testi-np text-start pl-1/5em">
-                                                                <h3 class="uppercase tracking-0/1em font-bold">Ahmad Subhan</h3>
+                                                                <h3 class="uppercase tracking-0/1em font-bold">Ahmad
+                                                                    Subhan</h3>
                                                                 <h4>Mahasiswa Polije</h4>
                                                             </div>
                                                         </div>
@@ -1348,7 +1379,9 @@
                                                     </div>
                                                     <div class="lqd-testi-quote mb-1/5em px-1em">
                                                         <blockquote>
-                                                            <p><span style="font-weight: 500;"><span>Materi yang diberikan sangat bermanfaat dan berguna bagi saya untuk upgrade skill</span> </p>
+                                                            <p><span style="font-weight: 500;"><span>Materi yang
+                                                                        diberikan sangat bermanfaat dan berguna bagi
+                                                                        saya untuk upgrade skill</span> </p>
                                                         </blockquote>
                                                     </div>
                                                     <div
@@ -1430,7 +1463,11 @@
                                                     </div>
                                                     <div class="lqd-testi-quote mb-1/5em px-1em">
                                                         <blockquote>
-                                                            <p><span style="font-weight: 500;"><span>Saya adalah seorang karyawan yang ingin belajar lebih banyak tentang IT, apalagi jaman sekarang teknologi sudah maju sekali, siapa tau bisa dapet kerja baru, yeaaaayyy</span>
+                                                            <p><span style="font-weight: 500;"><span>Saya adalah
+                                                                        seorang karyawan yang ingin belajar lebih banyak
+                                                                        tentang IT, apalagi jaman sekarang teknologi
+                                                                        sudah maju sekali, siapa tau bisa dapet kerja
+                                                                        baru, yeaaaayyy</span>
                                                             </p>
                                                         </blockquote>
                                                     </div>
@@ -1801,17 +1838,18 @@
                                         </div>
                                         <div class="w-50percent flex flex-col sm:w-full bg-bg2">
                                             <a href="https://wa.me/6285850961108">
-                                            <div class="module py-35 pr-50 pl-65 transition-all">
-                                                <div class="ld-fancy-heading relative">
-                                                    <h6
-                                                        class="ld-fh-element relative font-normal mb-0/75em text-white">
-                                                        Kontak Kami</h6>
+                                                <div class="module py-35 pr-50 pl-65 transition-all">
+                                                    <div class="ld-fancy-heading relative">
+                                                        <h6
+                                                            class="ld-fh-element relative font-normal mb-0/75em text-white">
+                                                            Kontak Kami</h6>
+                                                    </div>
+                                                    <div class="ld-fancy-heading relative">
+                                                        <h2 class="ld-fh-element relative text-white text-20 mb-0">+62
+                                                            858 5096 1108</h2>
+                                                    </div>
                                                 </div>
-                                                <div class="ld-fancy-heading relative">
-                                                    <h2 class="ld-fh-element relative text-white text-20 mb-0">+62 858 5096 1108</h2>
-                                                </div>
-                                            </div>
-                                        </a>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

@@ -295,7 +295,7 @@
                                     </div>
                                     <div class="relative z-2">
                                         <div class="ld-fancy-heading relative animation-element">
-                                            <h1 class="ld-fh-element relative lqd-highlight-custom lqd-highlight-custom-2 mb-0/35em text-white text-70"
+                                            <h1 class="ld-fh-element relative lqd-highlight-custom lqd-highlight-custom-2 mb-0/35em text-white text-50"
                                                 data-delay-options="{&quot;elements&quot;: &quot;.lqd-highlight-inner&quot;, &quot;delayType&quot;: &quot;transition&quot;}"
                                                 data-inview="true" data-text-rotator="true"
                                                 data-transition-delay="true">
@@ -331,7 +331,7 @@
                                                 class="ld-fh-element relative text-20 mb-1/65em leading-1/25em font-medium">
                                                 Tempat yang tepat untuk belajar coding cepat</p>
                                         </div>
-                                        <div class="mb-35 relative animation-element"><a
+                                        {{-- <div class="mb-35 relative animation-element"><a
                                                 class="btn btn-solid btn-hover-txt-liquid-x-alt rounded-100 bg-white font-medium text-15 leading-1/25em text-red-700 module-btn-md"
                                                 data-lity="#contact-modal" href="#contact-modal"><span
                                                     class="btn-txt text-start"
@@ -340,7 +340,7 @@
                                                         Terbatas</span>
                                                 </span></a><img alt="discount" class="relative -mt-50 -ml-40"
                                                 height="54" src="assets/images/demo/start-hub-2/3D/Discount.svg"
-                                                width="54"></div>
+                                                width="54"></div> --}}
                                         <div class="mb-45 animation-element">
                                             <p class="m-0"><a href="#"><img alt="Shape 3D" height="10"
                                                         src="assets/images/demo/start-hub-2/3D/shape.svg"
