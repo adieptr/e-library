@@ -46,7 +46,7 @@
             </script>
         @endif
 
-        <form action="{{ route('upload_content') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('upload_content') }}" method="post" enctype="multipart/form-data" id="formup">
             @csrf
             <p>Status Materi<span>*</span></p>
             <select name="status" class="box" required>
@@ -71,12 +71,36 @@
                 @endif
             </select>
             <p>Unggah Foto Materi <span>*</span></p>
-            <input type="file" name="thumb" accept="image/*"  class="box">
+            <input type="file" name="thumb" accept="image/*"  class="box" id="image">
+            <small id="image-error" style="display: none; font-size: 1.7rem; color: #888; text-align: center;">Ukuran gambar terlalu besar maksimal 2MB</small>
             <p>Unggah Video Materi <span>*</span></p>
-            <input type="file" name="video" accept="video/*"  class="box">
+            <input type="file" name="video" accept="video/*"  class="box" id="video">
+            <small id="video-error" style="display: none; font-size: 1.7rem; color: #888; text-align: center;">Ukuran video terlalu besar maksimal 50MB</small>
             <input type="submit" value="Tambah Materi" name="submit" class="btn">
         </form>
 
     </section>
+    <script>
+        const form = document.getElementById('formup');
+        const imageField = document.getElementById('image');
+        const imageError = document.getElementById('image-error');
+        const videoField = document.getElementById('video');
+        const videoError = document.getElementById('video-error');
+
+        form.addEventListener('submit', function(event) {
+            if (imageField.files[0].size > 2048 * 1024) {
+                event.preventDefault();
+                imageError.style.display = 'block';
+            } else {
+                imageError.style.display = 'none';
+            }
+            if (videoField.files[0].size > 50 * 1024 * 1024) {
+                event.preventDefault();
+                videoError.style.display = 'block';
+            } else {
+                videoError.style.display = 'none';
+            }
+        });
+    </script>
 
 @endsection

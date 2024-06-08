@@ -118,7 +118,7 @@ class ProfilespController extends Controller
             'name' => 'nullable|string',
             'profession' => 'nullable|string',
             'email' => 'nullable|email|unique:tutors,email,' . $tutorsId,
-            'image' => 'nullable|image|max:2000',
+            'image' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'old_pass' => 'nullable|string',
             'new_pass' => 'nullable|string',
             'cpass' => 'nullable|string|same:new_pass',

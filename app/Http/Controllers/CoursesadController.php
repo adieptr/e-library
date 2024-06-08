@@ -132,7 +132,7 @@ class CoursesadController extends Controller
             'status' => 'required',
             'title' => 'required|max:100',
             'description' => 'required|max:1000',
-            'image' => 'required',
+            'image' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'harga' => 'required|max:20',
             'tingkatan' => 'required',
             'jenis' => 'required'

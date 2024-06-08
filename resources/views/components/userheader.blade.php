@@ -74,7 +74,7 @@ if(isset($message)){
       <h3>{{ $userName }}</h3>
       <span>Student</span>
       <a href="{{ url('/profileuser') }}" class="btn">View Profile</a>
-
+      <a href="{{ url('/dashboarduser') }}" class="btn">Landing Page</a>
       {{-- <h3>Please login or register</h3>
       <div class="flex-btn" style="padding-top: .5rem;">
          <a href="login.php" class="option-btn">Login</a>

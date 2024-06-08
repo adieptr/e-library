@@ -41,11 +41,11 @@
 
 <section class="form-container" style="min-height: calc(100vh - 19rem);">
 
-    <form action="{{ route('tutors.update', $tutor->id) }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('tutors.update', $tutor->id) }}" method="post" enctype="multipart/form-data" id="formup">
         @csrf
         @method('put')
        <h3>Update Profile</h3>
-       <<div class="flex">
+       <div class="flex">
         <div class="col">
            <p>Nama Anda :</p>
            <input type="text" name="name" placeholder="{{ $tutor->name }}" maxlength="100"  class="box">
@@ -64,9 +64,25 @@
         </div>
      </div>
      <p>Unggah Foto Profil</p>
-     <input type="file" name="image" accept="image/*"  class="box">
+     <input type="file" name="image" accept="image/*"  class="box" id="image">
+     <small id="image-error" style="display: none; font-size: 1.7rem; color: #888; text-align: center;">Ukuran gambar terlalu besar maksimal 2MB</small>
      <input type="submit" name="submit" value="update" class="btn">
+
     </form>
 
  </section>
+ <script>
+    const form = document.getElementById('formup');
+    const imageField = document.getElementById('image');
+    const imageError = document.getElementById('image-error');
+
+    form.addEventListener('submit', function(event) {
+        if (imageField.files[0].size > 2048 * 1024) {
+            event.preventDefault();
+            imageError.style.display = 'block';
+        } else {
+            imageError.style.display = 'none';
+        }
+    });
+</script>
 @endsection

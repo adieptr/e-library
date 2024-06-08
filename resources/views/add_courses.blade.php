@@ -38,7 +38,7 @@
 
 <section class="playlist-form">
     <h1 class="heading">Buat Kursus</h1>
-    <form action="{{ route('add.playlist') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('add.playlist') }}" method="post" enctype="multipart/form-data" id="formup">
        @csrf
        <p>Status Kursus<span>*</span></p>
        <select name="status" class="box" required>
@@ -51,7 +51,8 @@
        <p>Deskripsi Kursus <span>*</span></p>
        <textarea name="description" class="box" required placeholder="Masukkan deksripsi" maxlength="1000" cols="30" rows="10"></textarea>
        <p>Foto Kursus <span>*</span></p>
-       <input type="file" name="image" accept="image/*" required class="box">
+       <input type="file" name="image" accept="image/*" required class="box" id="image">
+       <small id="image-error" style="display: none; font-size: 1.7rem; color: #888; text-align: center;">Ukuran gambar terlalu besar maksimal 2MB</small>
        <p>Tingkatan Kursus <span>*</span></p>
        <select name="tingkatan" class="box" required>
           <option value="" selected disabled>-- Pilih Tingkatan --</option>
@@ -72,5 +73,18 @@
 
     </form>
  </section>
+ <script>
+    const form = document.getElementById('formup');
+    const imageField = document.getElementById('image');
+    const imageError = document.getElementById('image-error');
 
+    form.addEventListener('submit', function(event) {
+        if (imageField.files[0].size > 2048 * 1024) {
+            event.preventDefault();
+            imageError.style.display = 'block';
+        } else {
+            imageError.style.display = 'none';
+        }
+    });
+</script>
 @endsection

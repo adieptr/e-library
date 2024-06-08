@@ -26,7 +26,9 @@ class RegisterController extends Controller
                 'name' => 'required|string|max:50',
                 'email' => 'required|email|unique:users',
                 'password' => 'required|string|min:6|confirmed',
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'image' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            ], [
+                'image.max' => 'Ukuran gambar terlalu besar. Maksimum 2MB.'
             ]);
 
             $id = substr(Str::uuid(), 0, 20);
@@ -148,7 +150,7 @@ public function update(Request $request)
 
         $user->save(); // Simpan perubahan pada model User
 
-        return redirect()->back()->with('message', $message); // Kembalikan ke halaman sebelumnya dengan pesan
+        return redirect()->route('pages.profileuser')->with('success', 'Berhasil Memperbarui Profil!');// Kembalikan ke halaman sebelumnya dengan pesan
     }
 }
 

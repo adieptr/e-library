@@ -41,6 +41,19 @@
 
     <h1 class="heading">Detail Profil</h1>
 
+    @if (session('success'))
+    <div class="modal-box" id="success-message">
+        <i class="fa-solid fa-check-to-slot"></i>
+        <h2>Success</h2>
+        <h3>{{ session('success') }}</h3>
+        <div class="but">
+            <button class="tutupbut" onclick="closeModalAndClearSession()">OK</button>
+        </div>
+    </div>
+    @elseif (session('error'))
+        <div id="error-message" class="popup-message">{{ session('error') }}</div>
+    @endif
+
     <div class="details">
 
        <div class="tutor">

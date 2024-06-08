@@ -20,7 +20,7 @@ class UserController extends Controller
             "name" => "required",
             'email' => "required",
             "password" => "required|min:8",
-            'image' => "required|image|mimes:png,jpg,jpeg,svg|max:2048",
+            'image' => "sometimes|required|image|mimes:jpeg,png,jpg,gif,svg|max:2048",
         ]);
         if ($validator->fails()) {
             print($validator);

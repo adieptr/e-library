@@ -92,11 +92,9 @@ class PagesControllerUser extends Controller
         return view('updateprofileu', compact('data'));
     }
 
-
     public function update(Request $request)
     {
         $userId = Cookie::get('user_id'); // Ambil ID pengguna dari cookie
-
         $user = User::find($userId); // Temukan pengguna berdasarkan ID
         $prev_pass = $user->password;
         $prev_image = $user->image;
@@ -127,8 +125,8 @@ class PagesControllerUser extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             // Validasi ukuran gambar
-            if ($image->getSize() > 2000000) {
-                $message[] = 'Image size too large!';
+            if ($image->getSize() > 2048 * 1024) {
+                $message[] = 'Image size too large! Maximum size is 2MB.';
             } else {
                 $imageExtension = $image->getClientOriginalExtension();
                 $rename = uniqid() . '.' . $imageExtension;
@@ -165,8 +163,9 @@ class PagesControllerUser extends Controller
 
         $user->save(); // Simpan perubahan pada model User
 
-        return redirect()->back()->with('message', $message); // Kembalikan ke halaman sebelumnya dengan pesan
+        return redirect()->route('pages.profileuser')->with('success', 'Berhasil Memperbarui Profil!');// Kembalikan ke halaman sebelumnya dengan pesan
     }
+
 
 
     public function game()

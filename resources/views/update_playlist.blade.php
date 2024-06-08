@@ -41,7 +41,7 @@
 <section class="playlist-form">
     <h1 class="heading">Update Kursus</h1>
 
-    <form action="{{ route('update_playlist') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('update_playlist') }}" method="post" enctype="multipart/form-data" id="formup">
         @csrf <!-- Tambahkan CSRF token untuk keamanan form -->
 
         <!-- Input tersembunyi untuk menyimpan ID playlist -->
@@ -64,7 +64,8 @@
         <div class="thumb">
             <img src="../uploaded_files/{{ $playlist->thumb }}" alt="Playlist Thumbnail">
         </div>
-        <input type="file" name="image" accept="image/*" class="box">
+        <input type="file" name="image" accept="image/*" class="box" id="image">
+        <small id="image-error" style="display: none; font-size: 1.7rem; color: #888; text-align: center;">Ukuran gambar terlalu besar maksimal 2MB</small>
 
         <p>Tingkatan Kursus <span>*</span></p>
         <select name="tingkatan" class="box" required>
@@ -88,5 +89,19 @@
         <input type="submit" value="Update Kursus" name="submit" class="btn">
     </form>
 </section>
+<script>
+    const form = document.getElementById('formup');
+    const imageField = document.getElementById('image');
+    const imageError = document.getElementById('image-error');
+
+    form.addEventListener('submit', function(event) {
+        if (imageField.files[0].size > 2048 * 1024) {
+            event.preventDefault();
+            imageError.style.display = 'block';
+        } else {
+            imageError.style.display = 'none';
+        }
+    });
+</script>
 
 @endsection

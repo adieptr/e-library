@@ -146,7 +146,7 @@ class ContentadController extends Controller
             'title' => 'required|max:100',
             'description' => 'required|max:1000',
             'playlist' => 'required', // Validasi bahwa playlist harus dipilih
-            'thumb' => 'image',
+            'thumb' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'video' => 'file|mimes:mp4,mov,avi', // Tambahkan validasi untuk jenis file video yang diizinkan
         ]);
 

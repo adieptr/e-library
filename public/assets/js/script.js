@@ -138,3 +138,8 @@ function closeModalAndClearSession() {
         console.error('Error:', error);
     });
 }
+
+function closeclose() {
+    document.getElementById('error-message').style.display = 'none';
+}
+

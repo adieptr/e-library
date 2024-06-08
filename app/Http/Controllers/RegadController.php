@@ -28,7 +28,7 @@ class RegadController extends Controller
                 'profession' => 'required',
                 'email' => 'required|email|unique:users',
                 'password' => 'required|string|min:6|confirmed',
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+                'image' => 'sometimes|required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
             ]);
 
             $id = substr(Str::uuid(), 0, 20);
