@@ -693,6 +693,171 @@
 
                         </div>
                     </div>
+                    <div class="container">
+                        <div class="row justify-center">
+                            <div class="col col-12 col-md-10 col-lg-9 col-xl-7 mb-25 text-center px-70 sm:px-0">
+                                <div class="mb-20 ld-fancy-heading relative">
+                                    {{-- <h6
+                                        class="ld-fh-element m-0 inline-block relative label text-10 tracking-1 uppercase font-bold text-blue-500 bg-blue-200 trackink-1px py-5 px-15 rounded-100">
+                                        Our Courses</h6> --}}
+                                </div>
+                                <div class="ld-fancy-heading relative">
+                                    <h2 class="ld-fh-element mb-0/5em inline-block relative">For Beginner</h2>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+                                <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+                                <div class="product-container">
+                                    @foreach ($materibegin as $matbe)
+                                        <div class="product-card">
+                                            <div class="product-image">
+                                                <span class="discount-tag">Best Seller</span>
+                                                <img src="{{ asset('uploaded_files/' . $matbe->thumb) }}"
+                                                    class="product-thumb" alt="">
+                                                    <button class="card-btn" onclick="location.href='{{ route('course.detailcor', $matbe->id) }}'">Lihat Selengkapnya</button>
+                                            </div>
+                                            <div class="product-info">
+                                                <h3 class="product-brand">{{ $matbe->title }}</h3>
+                                                <p class="product-short-description">{{ $matbe->description }}</p>
+                                                <span class="price">Rp{{ number_format($matbe->harga, 0, ',', '.') }}</span>
+                                            </div>
+                                        </div>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                            <script>
+                                const productContainers = [...document.querySelectorAll('.product-container')];
+                                const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+                                const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+                                productContainers.forEach((item, i) => {
+                                    let containerDimensions = item.getBoundingClientRect();
+                                    let containerWidth = containerDimensions.width;
+
+                                    nxtBtn[i].addEventListener('click', () => {
+                                        item.scrollLeft += containerWidth;
+                                    })
+
+                                    preBtn[i].addEventListener('click', () => {
+                                        item.scrollLeft -= containerWidth;
+                                    })
+                                })
+                            </script>
+
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-center">
+                            <div class="col col-12 col-md-10 col-lg-9 col-xl-7 mb-25 text-center px-70 sm:px-0">
+                                <div class="mb-20 ld-fancy-heading relative">
+                                    {{-- <h6
+                                        class="ld-fh-element m-0 inline-block relative label text-10 tracking-1 uppercase font-bold text-blue-500 bg-blue-200 trackink-1px py-5 px-15 rounded-100">
+                                        Our Courses</h6> --}}
+                                </div>
+                                <div class="ld-fancy-heading relative">
+                                    <h2 class="ld-fh-element mb-0/5em inline-block relative">For Intermediate</h2>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+                                <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+                                <div class="product-container">
+                                    @foreach ($materiin as $matin)
+                                        <div class="product-card">
+                                            <div class="product-image">
+                                                <span class="discount-tag">Best Seller</span>
+                                                <img src="{{ asset('uploaded_files/' . $matin->thumb) }}"
+                                                    class="product-thumb" alt="">
+                                                    <button class="card-btn" onclick="location.href='{{ route('course.detailcor', $matin->id) }}'">Lihat Selengkapnya</button>
+                                            </div>
+                                            <div class="product-info">
+                                                <h3 class="product-brand">{{ $matin->title }}</h3>
+                                                <p class="product-short-description">{{ $matin->description }}</p>
+                                                <span class="price">Rp{{ number_format($matin->harga, 0, ',', '.') }}</span>
+                                            </div>
+                                        </div>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                            <script>
+                                const productContainers = [...document.querySelectorAll('.product-container')];
+                                const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+                                const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+                                productContainers.forEach((item, i) => {
+                                    let containerDimensions = item.getBoundingClientRect();
+                                    let containerWidth = containerDimensions.width;
+
+                                    nxtBtn[i].addEventListener('click', () => {
+                                        item.scrollLeft += containerWidth;
+                                    })
+
+                                    preBtn[i].addEventListener('click', () => {
+                                        item.scrollLeft -= containerWidth;
+                                    })
+                                })
+                            </script>
+
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-center">
+                            <div class="col col-12 col-md-10 col-lg-9 col-xl-7 mb-25 text-center px-70 sm:px-0">
+                                <div class="mb-20 ld-fancy-heading relative">
+                                    {{-- <h6
+                                        class="ld-fh-element m-0 inline-block relative label text-10 tracking-1 uppercase font-bold text-blue-500 bg-blue-200 trackink-1px py-5 px-15 rounded-100">
+                                        Our Courses</h6> --}}
+                                </div>
+                                <div class="ld-fancy-heading relative">
+                                    <h2 class="ld-fh-element mb-0/5em inline-block relative">For Advanced</h2>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+                                <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+                                <div class="product-container">
+                                    @foreach ($materiad as $matad)
+                                        <div class="product-card">
+                                            <div class="product-image">
+                                                <span class="discount-tag">Best Seller</span>
+                                                <img src="{{ asset('uploaded_files/' . $matad->thumb) }}"
+                                                    class="product-thumb" alt="">
+                                                    <button class="card-btn" onclick="location.href='{{ route('course.detailcor', $matad->id) }}'">Lihat Selengkapnya</button>
+                                            </div>
+                                            <div class="product-info">
+                                                <h3 class="product-brand">{{ $matad->title }}</h3>
+                                                <p class="product-short-description">{{ $matad->description }}</p>
+                                                <span class="price">Rp{{ number_format($matad->harga, 0, ',', '.') }}</span>
+                                            </div>
+                                        </div>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                            <script>
+                                const productContainers = [...document.querySelectorAll('.product-container')];
+                                const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+                                const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+                                productContainers.forEach((item, i) => {
+                                    let containerDimensions = item.getBoundingClientRect();
+                                    let containerWidth = containerDimensions.width;
+
+                                    nxtBtn[i].addEventListener('click', () => {
+                                        item.scrollLeft += containerWidth;
+                                    })
+
+                                    preBtn[i].addEventListener('click', () => {
+                                        item.scrollLeft -= containerWidth;
+                                    })
+                                })
+                            </script>
+
+                        </div>
+                    </div>
                 </section>
                 <section class="lqd-section case-studies pt-55 pb-120">
                     <div class="container">

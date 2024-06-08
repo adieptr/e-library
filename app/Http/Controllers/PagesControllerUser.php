@@ -45,6 +45,24 @@ class PagesControllerUser extends Controller
             $tutor = Tutors::find($mat->tutor_id);
             $mat->tutor = $tutor;
         }
+
+        $materibegin = Playlist::where('tingkatan', 'beginer')->get();
+        foreach ($materibegin as $matbe) {
+            $tutor = Tutors::find($matbe->tutor_id);
+            $matbe->tutor = $tutor;
+        }
+
+        $materiin = Playlist::where('tingkatan', 'intermiadtel')->get();
+        foreach ($materiin as $matin) {
+            $tutor = Tutors::find($matin->tutor_id);
+            $matin->tutor = $tutor;
+        }
+
+        $materiad = Playlist::where('tingkatan', 'Advenced')->get();
+        foreach ($materiad as $matad) {
+            $tutor = Tutors::find($matad->tutor_id);
+            $matad->tutor = $tutor;
+        }
         $userId = Cookie::get('user_id'); // Ambil ID pengguna dari cookie
         $user = User::find($userId);
         if ($user) { // Temukan pengguna berdasarkan ID
@@ -57,7 +75,10 @@ class PagesControllerUser extends Controller
                 "userName" => $userName,
                 "userImage" => $userImage,
                 "playlists" => $playlists,
-                "materi" => $materi // Teruskan nama pengguna ke tampilan
+                "materi" => $materi,
+                "materibegin" => $materibegin,
+                "materiin" => $materiin,
+                "materiad" => $materiad, // Teruskan nama pengguna ke tampilan
             ]);
         } else {
             return redirect()->route('loginnn');
