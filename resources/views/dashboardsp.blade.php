@@ -63,7 +63,7 @@
                                 <h3>
                                     {{ $totalTutors }}
                                 </h3>
-                                <p>Total Tutor</p>
+                                <p>Total Buku</p>
                             </span>
                         </li>
                     </a>
@@ -83,9 +83,10 @@
                         <li><i class='bx bx-dollar-circle'></i>
                             <span class="info">
                                 <h4 style="font-size: 17px">
-                                    Rp  {{ number_format($totalHargaTransaksi, 0, ',', '.') }}
+                                    {{-- Rp  {{ number_format($totalHargaTransaksi, 0, ',', '.') }} --}}
+                                    5
                                 </h4>
-                                <p>Total Pendapatan</p>
+                                <p>Total Buku Dipinjam</p>
                             </span>
                         </li>
                     </a>
@@ -96,7 +97,7 @@
                                 <h3>
                                     {{ $jumlahTransaksiPending }}
                                 </h3>
-                                <p>Total Transaksi Pending</p>
+                                <p>Total Peminjam</p>
                             </span>
                         </li>
                     </a>
@@ -107,14 +108,14 @@
                     <div class="orders">
                         <div class="header2">
                             <i class='bx bx-receipt'></i>
-                            <h3>Data Siswa Yang Memiliki Course</h3>
+                            <h3>Data Siswa Yang Hampir Mencapi Tenggat Pengembalian Buku</h3>
                         </div>
                         <table>
                             <thead>
                                 <tr>
                                     <th>Siswa</th>
                                     <th>Email</th>
-                                    <th>Kursus</th>
+                                    <th>Judul Buku</th>
                                     {{-- <th>Status</th> --}}
                                 </tr>
                             </thead>

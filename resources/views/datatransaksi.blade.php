@@ -9,7 +9,7 @@
             <a href="{{ url('/dashboardsp') }}" class="logo">Admin</a>
 
             <form action="{{ route('caritransaksi') }}" method="get" class="search-form">
-                <input type="text" name="search" placeholder="Cari Transaksi..." required maxlength="100" value="{{ request('search') }}">
+                <input type="text" name="search" placeholder="Cari Siswa..." required maxlength="100" value="{{ request('search') }}">
                 <button type="submit" class="fas fa-search" name="search_btn"></button>
             </form>
 
@@ -53,17 +53,18 @@
                     <div class="orders">
                         <div class="header2">
                             <i class='bx bx-receipt'></i>
-                            <h3>Data Keuangan</h3>
+                            <h3>Data Peminjaman</h3>
                         </div>
                         <table>
                             <thead>
                                 <tr>
                                     <th>Siswa</th>
-                                    <th>Kursus</th>
-                                    <th>Harga</th>
+                                    <th>Judul</th>
+                                    {{-- <th>Harga</th> --}}
                                     <th>Status</th>
-                                    <th>Tanggal</th>
-                                    <th>Bukti Pembayaran</th>
+                                    <th>Tanggal Peminjamaan</th>
+                                    <th>Tanggal Pengembalian</th>
+                                    {{-- <th>Bukti Pembayaran</th> --}}
                                     {{-- <th>Status</th> --}}
                                     <th style="text-align: center;">Aksi</th>
                                 </tr>
@@ -85,38 +86,34 @@
                                         </td>
                                         <td style="font-size: 15px">
                                             @if ($transaction->playlist)
-                                                Rp  {{ number_format($transaction->playlist->harga, 0, ',', '.') }}
+                                                <p>Selesai</p>
                                             @else
                                                 Nama Kursus Tidak Tersedia
                                             @endif
                                         </td>
                                         <td style="font-size: 15px">
-                                            @if($transaction->status == 'pending')
-                                                Belum lunas
-                                            @elseif($transaction->status == 'ongoing')
-                                                Lunas
-                                             @elseif($transaction->status == 'selesai')
-                                                Kursus Selesai
-                                            @else
-                                                {{ $transaction->status }}
-                                            @endif
+                                            @if ($transaction->tanggal)
+                                            <p>2025-02-13</p>
+                                        @else
+                                            Bukti Pembayaran Tidak Tersedia
+                                        @endif
                                         </td>
 
                                         <td style="font-size: 15px">
                                             @if ($transaction->tanggal)
-                                                {{ $transaction->tanggal }}
+                                                <p>2025-02-13</p>
                                             @else
                                                 Bukti Pembayaran Tidak Tersedia
                                             @endif
                                         </td>
-                                        <td style="font-size: 15px; text-align: center;">
+                                        {{-- <td style="font-size: 15px; text-align: center;">
                                             @if ($transaction->bukti_pembayaran)
                                                 <img src="{{ asset('uploaded_files/' . $transaction->bukti_pembayaran) }}"
                                                     alt="Bukti Pembayaran" style="border-radius: 0; ">
                                             @else
                                                 Bukti Pembayaran Tidak Tersedia
                                             @endif
-                                        </td>
+                                        </td> --}}
                                         <td style="text-align: center;">
                                             <div class="aksi">
                                                 <a href="{{ route('transaksi.tampiluptra', $transaction->id_transaksi) }}"

@@ -16,7 +16,7 @@
                     <span>{{ $playlist->date }}</span>
                 </div>
             </div>
-            <img src="uploaded_files/{{ $playlist->thumb }}" class="thumb" alt="">
+            <a href="{{ route('playlist.showPlaylist', ['id' => $playlist->id]) }}"><img src="uploaded_files/{{ $playlist->thumb }}" class="thumb" alt=""></a>
             <h3 class="title">{{ $playlist->title }}</h3>
             <a href="{{ route('playlist.showPlaylist', ['id' => $playlist->id]) }}" class="inline-btn-btn">Lihat Kursus</a>
             <form action="{{ route('complete.course', ['playlist_id' => $playlist->id]) }}" method="POST" style="display: inline;" onsubmit="return confirmCompletion()">

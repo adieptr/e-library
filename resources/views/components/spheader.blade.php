@@ -67,15 +67,16 @@
             <img src="{{ asset('uploaded_files/' . $userImage) }}" alt="">
             <h3>{{ $userName }}</h3>
             <span>{{ $userProfesi }}</span>
-            <a href="{{ url('profilesp') }}" class="btn">View Profile</a>
+            <a href="{{ url('profilesp') }}" class="btn">Lihat Profile</a>
 
         </div>
 
         <nav class="navbar">
             <a href="{{ url('/dashboardsp') }}"><i class="fas fa-home"></i><span>Beranda</span></a>
-            <a href="{{ route('tutor.index') }}"><i class="fa-solid fa-bars-staggered"></i><span>Tutor</span></a>
+            <a href="{{ route('contentsp.index') }}"><i class="fa-solid fa-book"></i><span>Buku</span></a>
+            <a href="{{ route('tutor.index') }}"><i class="fa-solid fa-bars-staggered"></i><span>Guru</span></a>
             <a href="{{ route('siswa.index') }}"><i class="fas fa-graduation-cap"></i><span>Siswa</span></a>
-            <a href="{{ route('pages.datatransaksi') }}"><i class="fa-solid fa-circle-dollar-to-slot"></i><span>Transaksi</span></a>
+            <a href="{{ route('pages.datatransaksi') }}"><i class="fa-solid fa-circle-dollar-to-slot"></i><span>Peminjaman</span></a>
             <a href="{{ route('logoutsp') }}" onclick="return confirm('Anda Yakin Ingin Logout?');"><i class="fas fa-right-from-bracket"></i><span>Log out</span></a>
 
         </nav>

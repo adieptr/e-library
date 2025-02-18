@@ -25,7 +25,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-   
+
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link rel="icon" href="{{ asset('assets/images/demo/start-hub-2/logo/sidelogo.png') }}">
@@ -114,7 +114,7 @@
     </p>
     <section class="container py-5 mt-100" id="portfolio">
         <article>
-            <h1>Detail Pembelian</h1>
+            <h1>Detail Peminjaman</h1>
         </article>
         <article>
             <h1>{{ $course->title }}</h1>

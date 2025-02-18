@@ -18,14 +18,12 @@ Route::controller(UserController::class)->group(function(){
     Route::post("/apiTest/updatePasswordByEmail", [UserController::class, 'updatePasswordByEmail']);
 });
 
-
-
 Route::controller(CourceController::class)->group(function(){
     Route::get("/apiCource","index");
     Route::get("/apiCource/{id}","detailsCource");
     Route::get("/search/cource","searchCource");
     Route::post("/apiCource/materi","materiContent");
-    Route::post("/apiClass","detailkelas");
+    Route::post("/apiClass","detailKelas");
 });
 Route::controller(ClassController::class)->group(function(){
     Route::get("/apiKelas/{id}","index");

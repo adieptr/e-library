@@ -125,13 +125,17 @@ Route::get('/watch-video/{id}', 'VideoController@show')->name('watch.video');
 
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\PlaylistadController;
+// use App\Http\Controllers\PlaylistspController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\VideoadController;
 use App\Http\Controllers\CoursesadController;
+use App\Http\Controllers\ContentspController;
+
 use App\Http\Controllers\TutorController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SiswassssController;
 
+// Route::get('/playlistsp', [PlaylistspController::class, 'index'])->name('playlist.index');
 Route::get('/playlist/{id}', [PlaylistController::class, 'index'])->name('playlist.index');
 Route::get('/playlist/{id}', [PlaylistController::class, 'showPlaylist'])->name('playlist.showPlaylist');
 Route::get('/playlistad/{id}', [PlaylistadController::class, 'index'])->name('playlist.index');
@@ -170,6 +174,7 @@ Route::get('/update-playlist/{get_id}', [CoursesadController::class, 'updatePlay
 
 
 Route::get('/contentad', [ContentadController::class, 'index'])->name('contentad.index');
+Route::get('/contentsp', [ContentspController::class, 'index'])->name('contentsp.index');
 Route::post('/delete-video', [ContentadController::class, 'delete'])->name('delete_video');
 Route::get('/add-content', [ContentadController::class, 'showAddContentForm'])->name('add_content');
 Route::post('/upload-content', [ContentadController::class, 'uploadContent'])->name('upload_content');
@@ -178,6 +183,7 @@ Route::post('update-content/{videoId}', [ContentadController::class, 'updateCont
 Route::get('/commentsad', [ContentAdController::class, 'commentsAd'])->name('commentsad');
 Route::post('/caricommentsad', [ContentAdController::class, 'caricommentsad'])->name('caricommentsad');
 Route::post('/caricontentad', [ContentAdController::class, 'caricontentad'])->name('caricontentad');
+Route::post('/caricontentsp', [ContentspController::class, 'caricontentsp'])->name('caricontentsp');
 Route::post('/delete-comment', [ContentAdController::class, 'deleteComment'])->name('delete.comment');
 
 

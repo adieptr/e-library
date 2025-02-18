@@ -7,11 +7,11 @@
 
     <section class="flex">
 
-        <a href="{{ url('/dashboardsp') }}" class="logo">Tutor</a>
+        <a href="{{ url('/dashboardsp') }}" class="logo">Admin</a>
 
         <form action="{{ route('tutor.caritutor') }}" method="post" class="search-form">
             @csrf
-            <input type="text" name="search" placeholder="Cari Tutor..." required maxlength="100">
+            <input type="text" name="search" placeholder="Cari Guru..." required maxlength="100">
             <button type="submit" class="fas fa-search" name="search_btn"></button>
         </form>
 
@@ -40,10 +40,10 @@
 
 
 <section class="playlists">
-    <h1 class="heading">Tambah Tutor</h1>
+    <h1 class="heading">Tambah Guru</h1>
     <div class="box-container">
        <div class="box" style="text-align: center;">
-          <h3 class="title" style="margin-bottom: .5rem;">Tambah Tutor Baru</h3>
+          <h3 class="title" style="margin-bottom: .5rem;">Tambah Guru Baru</h3>
           <a href="{{ url('/tambahtutor') }}" class="btn">Tambah</a>
        </div>
        @foreach($playlists as $playlist)
@@ -64,7 +64,7 @@
              <a href="" class="option-btn">Ubah</a>
              <input type="submit" value="Hapus" class="delete-btn" onclick="return confirm('Anda Yakin Ingin Menghapus Data Tutor?');" name="delete">
           </form>
-          <a href="{{ route('detailsiswa.showPlaylistad', ['id' => $playlist->id]) }}" class="btn">Lihat Tutor</a>
+          <a href="{{ route('detailsiswa.showPlaylistad', ['id' => $playlist->id]) }}" class="btn">Lihat Guru</a>
        </div>
        @endforeach
     </div>

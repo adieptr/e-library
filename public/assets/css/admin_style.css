@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
 :root{
-   --main-color:#0391c5;
+   --main-color:#17726d;
    --birucodinggo:#a0b3f7;
    --red:#e74c3c;
-   --light-orange: #f3b858;
+   --light-orange:  #17726d;
    --oragen:#f39c12;
    --white:#fff;
    --black:#2c3e50;
@@ -67,7 +67,7 @@ body{
 body.dark{
    --white:#222;
    --black:#fff;
-   --light-color:#aaa;
+   --light-color:#ffffff;
    --light-bg:#333;
    --border:.1rem solid rgba(255,255,255,.2);
 
@@ -75,7 +75,7 @@ body.dark{
    --light: #434344;
    --primary: #1976D2;
    --light-primary: #CFE8FF;
-   --grey: #eee;
+   --grey: #2a2a2a;
    --dark-grey: #AAAAAA;
    --dark: #e2e2e2;
    --danger: #D32F2F;
@@ -103,7 +103,7 @@ section{
 .inline-option-btn,
 .inline-delete-btn{
    border-radius: .5rem;
-   padding: 1rem 3rem;
+   padding: 1rem 2rem;
    font-size: 1.8rem;
    color: #fff;
    margin-top: 1rem;
@@ -631,7 +631,7 @@ section{
 
 .playlists .box-container{
    display: grid;
-   grid-template-columns: repeat(auto-fit, 35rem);
+   grid-template-columns: repeat(auto-fit, 25rem);
    align-items: flex-start;
    justify-content: center;
    gap: 1.5rem;
@@ -826,7 +826,7 @@ section{
 
 .contents .box-container{
    display: grid;
-   grid-template-columns: repeat(auto-fit, 35rem);
+   grid-template-columns: repeat(auto-fit, 25rem);
    align-items: flex-start;
    justify-content: center;
    gap: 1.5rem;
@@ -1413,7 +1413,7 @@ button.tutupbutup{
     color: var(--danger);
 }
 
-.content main .insights li .info h3{
+.content main .insights li .info h3, h4{
     font-size: 24px;
     font-weight: 600;
     color: var(--dark);

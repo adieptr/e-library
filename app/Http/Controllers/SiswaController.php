@@ -22,7 +22,7 @@ class SiswaController extends Controller
         $userName = $tutors->name; // Ambil nama pengguna
         $userImage = $tutors->image; // Ambil URL gambar profil pengguna
         $userProfesi = $tutors->profession;
-        $contents = User::paginate(5);
+        $contents = User::paginate(8);
         return view('viewsiswa', [
             "title" => "Data Tutors",
             "userName" => $userName, // Teruskan nama pengguna ke tampilan

@@ -129,9 +129,9 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>Login dan bergabung bersama Codinggo</h3>
+                    <h3>Login dan bergabung bersama E-library</h3>
                     <p>
-                        Belum memiliki akun Codinggo? Klik tombol dibawah!
+                        Belum memiliki akun E-library? Klik tombol dibawah!
                     </p>
                     <button class="btn transparent" id="sign-up-btn">
                         Daftar Sekarang
@@ -141,7 +141,7 @@
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>Selamat datang di Codinggo!</h3>
+                    <h3>Selamat datang di E-library!</h3>
                     <p>
                         Sudah memiliki akun? Klik tombol dibawah!
                     </p>
